@@ -1,5 +1,5 @@
 # Island Perimeter
-https://leetcode.com/problems/island-perimeter
+## https://leetcode.com/problems/island-perimeter
 
 You are given a map in form of a two-dimensional integer grid where 1 represents land and 0 represents water.
 
@@ -31,7 +31,7 @@ We can solve this problem, by iterating over each element of the 2D grid, and if
 ```java
 public class App {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		int[][] grid = {
 				 {0,1,0,0},
 				 {1,1,1,0},
@@ -39,9 +39,9 @@ public class App {
 				 {1,1,0,0}
 		};
 		System.out.println("Perimeter : "+islandPerimeter(grid));
-	}
+    }
 	
-	public static int islandPerimeter(int[][] grid) {
+    public static int islandPerimeter(int[][] grid) {
         if(grid == null || grid.length == 0)
             return 0;
         
