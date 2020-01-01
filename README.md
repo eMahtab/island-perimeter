@@ -20,7 +20,7 @@ Output: 16
 
 Explanation: The perimeter is the 16 yellow stripes in the image below:
 
-
+![Island Perimeter](island.png?raw=true "Island Perimeter")
 
 
 
