@@ -35,4 +35,4 @@ Explanation: The perimeter is the 16 yellow stripes in the image below:
 
 
 ## References :
-https://massivealgorithms.blogspot.com/2016/11/leetcode-463-island-perimeter.html?_sm_au_=iVVPDWVZFtm3MsQ5ML8tvK34L00HF
+https://massivealgorithms.blogspot.com/2016/11/leetcode-463-island-perimeter.html
