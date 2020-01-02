@@ -26,7 +26,7 @@ Explanation: The perimeter is the 16 yellow stripes in the image below:
 ## Approach :
 We can solve this problem, by iterating over each element of the 2D grid, and if we see a 1(land), we add its perimeter to the final result. Now to calculate the perimeter of a land, we see its 4 adjacent cells (left, right, up, down). 
 
-Note that while calculating the perimeter of a land, only the adjacent cells that are water or if the land's surronding is outside the grid (remember outside the grid its all water), then only it will add to perimeter.
+Note that while calculating the perimeter of a land, only the adjacent cells that are water or if the land's surrounding is outside the grid (remember outside the grid its all water), then only it will add to perimeter.
 
 ### Implementation
 
