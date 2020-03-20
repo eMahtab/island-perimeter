@@ -31,49 +31,39 @@ Note that while calculating the perimeter of a land, only the adjacent cells tha
 ### Implementation
 
 ```java
-public class App {
-
-    public static void main(String[] args) {
-		int[][] grid = {
-				 {0,1,0,0},
-				 {1,1,1,0},
-				 {0,1,0,0},
-				 {1,1,0,0}
-		};
-		System.out.println("Perimeter : "+islandPerimeter(grid));
-    }
-	
-    public static int islandPerimeter(int[][] grid) {
+class Solution {
+    public int islandPerimeter(int[][] grid) {
         if(grid == null || grid.length == 0)
             return 0;
         
         int perimeter = 0;
-        for(int i = 0; i < grid.length; i++){
-            for(int j = 0; j < grid[0].length; j++){
-                if(grid[i][j] == 1){
-                    perimeter += getPerimeter(grid, i, j);
+        for(int i = 0; i < grid.length; i++) {
+            for(int j = 0; j < grid[i].length; j++) {
+                if(grid[i][j] == 1) {
+                    perimeter += perimeter(grid, i, j);
                 }
             }
         }
         return perimeter;
     }
     
-    public static int getPerimeter(int[][] grid, int row, int column){
+    private int perimeter(int[][] grid, int row, int column) {
         int perimeter = 0;
+        if(column == 0 || grid[row][column-1] == 0)
+            perimeter++;
         
-        if( (column - 1) < 0 || grid[row][column - 1] == 0)
+        if(column == grid[row].length-1 || grid[row][column+1] == 0)
             perimeter++;
-        if( (column + 1) == grid[0].length || grid[row][column + 1] == 0)
+        
+        if(row == 0 || grid[row-1][column] == 0)
             perimeter++;
-        if( (row - 1) < 0 || grid[row - 1][column] == 0)
+        
+        if(row == grid.length-1 || grid[row+1][column] == 0)
             perimeter++;
-        if( (row + 1) == grid.length || grid[row + 1][column] == 0)
-            perimeter++;
-      
-        return perimeter;
+         
+        return perimeter;    
     }
 }
-
 ```
 Above implementation have runtime complexity of O(m * n) and space complexity of O(1), where m is the number of rows in the input grid and n is the number of columns in the input grid.
 
